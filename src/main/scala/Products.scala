@@ -4,14 +4,11 @@ import scala.io.Source
   * Created by yuan on 30/09/16.
   */
 
-case class Product(name: String, price: Float)
+case class Product(name: String, price: Double)
 
 class Products {
-
   val fileName = "src/main/data/productsList.csv"
-
   var products: Array[Product] = Array.empty
-
   def getProductByName(name:String): Any = {
     products.exists(_.name.toLowerCase() == name.toLowerCase()) match {
       case true => println(products.filter(_.name.toLowerCase() == name.toLowerCase()).head)
@@ -24,7 +21,7 @@ object Products extends Products{
   val sources = Source.fromFile(fileName)
   for(line <- sources.getLines()) {
     val cols = line.split(',').map(_.trim)
-    products = products :+ Product(cols(0), cols(1).toFloat)
+    products = products :+ Product(cols(0), cols(1).toDouble)
   }
   sources.close()
 }

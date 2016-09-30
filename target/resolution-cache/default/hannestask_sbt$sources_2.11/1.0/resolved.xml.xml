@@ -4,7 +4,7 @@
 		module="hannestask_sbt$sources_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20160930160032"
+		publication="20160930161823"
 	/>
 	<configurations>
 		<conf name="compile" visibility="public" description=""/>
