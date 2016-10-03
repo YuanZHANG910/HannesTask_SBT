@@ -3,17 +3,39 @@
   */
 
 object Main {
+
   def main(args: Array[String]): Unit = {
-    massage("Hi Boss, Please enter a product name or enter 0 to exit")
+    massage("Hi Boss, how can I help?")
+    mainTemplate
+  }
+
+  def mainTemplate: Unit ={
+    Menu.mainMenu()
     while(true) {
-      val input = scala.io.StdIn.readLine()
-      input match {
-        case "0" =>
-          sys.exit
-        case "" => massage("Come on Boss! Please enter a product name or enter 0 to exit")
-        case _ => Products.checkProductByName(input)
+      readInput match {
+        case "1" => Menu.checkProductMenu()
+        case "0" => {
+          massage("Boss are you sure you would like to exit?"  )
+          massage("Enter Y to conform, or anything else to stay with me")
+          readInput match {
+            case "Y"|"y" => {
+              massage("OK, goodbye boss")
+              sys.exit
+            }
+            case _ => Menu.mainMenu()
+          }
+        }
+        case _ => {
+          massage("Come on Boss!")
+          Menu.mainMenu()
+        }
       }
     }
+  }
+
+  def readInput: String ={
+    val input = scala.io.StdIn.readLine()
+    input
   }
 
   def massage(feedBack:String): Unit ={
