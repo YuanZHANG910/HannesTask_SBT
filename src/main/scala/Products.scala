@@ -11,10 +11,10 @@ class Products {
   var products: Map[String,Double] = Map()
   val sources = Source.fromFile(fileName)
 
-  def getProductByName(name:String): Any = {
+  def checkProductByName(name:String): Any = {
     products.contains(name.toLowerCase()) match {
-      case true => println("the Price for " + name + " is " + products(name.toLowerCase()))
-      case false => println("Invalid product's name, Please try again")
+      case true => Main.massage("the Price for " + name + " is " + products(name.toLowerCase()))
+      case false => Main.massage("Invalid product's name, Please try again")
     }
   }
 }

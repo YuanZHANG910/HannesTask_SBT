@@ -21,15 +21,15 @@ class ProductsSpec extends WordSpec with MustMatchers {
     }
 
     "able to search a product by name and give the price if the product was in the list" in {
-      Products.getProductByName("Orange") mustBe println(products.head)
+      Products.checkProductByName("Orange") mustBe println(products.head)
     }
 
     "able to search a product by name without case sensitive" in {
-      Products.getProductByName("oRanGe") mustBe println(products.head)
+      Products.checkProductByName("oRanGe") mustBe println(products.head)
     }
 
     "if the product was not in the list, it should able to point it out" in {
-      Products.getProductByName("Onge") mustBe println("Invalid product's name, Please try again")
+      Products.checkProductByName("Onge") mustBe println("Invalid product's name, Please try again")
     }
   }
 
