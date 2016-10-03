@@ -6,26 +6,29 @@ import scala.io.Source
   */
 class ProductsSpec extends WordSpec with MustMatchers {
 
-    val fileName = "src/main/data/productsList.csv"
-    val sources = Source.fromFile(fileName)
-    var products: Array[Product] = Array.empty
-    for(line <- sources.getLines()) {
-      val cols = line.split(',').map(_.trim)
-      products = products :+ Product(cols(0), cols(1).toDouble)
-    }
-    sources.close()
+  val fileName = "src/main/data/productsList.csv"
+  var products: Map[String,Double] = Map()
+  val sources = Source.fromFile(fileName)
+
+  for(line <- sources.getLines()) {
+    val cols = line.split(',').map(_.trim)
+    products += (cols(0).toLowerCase() -> cols(1).toDouble)
+  }
+  sources.close()
 
   "The Products class" should {
-    "able to give a list of products" in {
-      products.head mustBe Product("Orange", 0.60)
+    "able to give a map of products" in {
+      products.contains("orange") mustBe true
     }
 
     "able to search a product by name and give the price if the product was in the list" in {
-      Products.checkProductByName("Orange") mustBe println(products.head)
+      Products.checkProductByName("Orange") mustBe println(products("oRanGe".toLowerCase))
+      println()
     }
 
     "able to search a product by name without case sensitive" in {
-      Products.checkProductByName("oRanGe") mustBe println(products.head)
+      Products.checkProductByName("oRanGe") mustBe println(products("oRanGe".toLowerCase))
+      println()
     }
 
     "if the product was not in the list, it should able to point it out" in {
