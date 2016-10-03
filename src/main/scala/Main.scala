@@ -5,7 +5,7 @@
 object Main {
   def main(args: Array[String]): Unit = {
     while(true) {
-      println("Please enter a product name or enter 0 to exit")
+      println("Hi Boss, Please enter a product name or enter 0 to exit")
       val input = scala.io.StdIn.readLine()
       input match {
         case "0" =>

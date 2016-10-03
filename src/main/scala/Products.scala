@@ -8,20 +8,21 @@ case class Product(name: String, price: Double)
 
 class Products {
   val fileName = "src/main/data/productsList.csv"
-  var products: Array[Product] = Array.empty
+  var products: Map[String,Double] = Map()
+  val sources = Source.fromFile(fileName)
+
   def getProductByName(name:String): Any = {
-    products.exists(_.name.toLowerCase() == name.toLowerCase()) match {
-      case true => println(products.filter(_.name.toLowerCase() == name.toLowerCase()).head)
+    products.contains(name.toLowerCase()) match {
+      case true => println("the Price for " + name + " is " + products(name.toLowerCase()))
       case false => println("Invalid product's name, Please try again")
     }
   }
 }
 
 object Products extends Products{
-  val sources = Source.fromFile(fileName)
   for(line <- sources.getLines()) {
     val cols = line.split(',').map(_.trim)
-    products = products :+ Product(cols(0), cols(1).toDouble)
+    products += (cols(0).toLowerCase() -> cols(1).toDouble)
   }
   sources.close()
 }

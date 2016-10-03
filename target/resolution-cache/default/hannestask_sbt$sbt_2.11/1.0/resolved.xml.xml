@@ -4,7 +4,7 @@
 		module="hannestask_sbt$sbt_2.11"
 		revision="1.0"
 		status="integration"
-		publication="20160930161822"
+		publication="20161003102136"
 	/>
 	<configurations>
 		<conf name="default" visibility="public"/>
