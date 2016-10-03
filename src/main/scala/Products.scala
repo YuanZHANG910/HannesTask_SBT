@@ -18,13 +18,8 @@ class Products {
   }
   sources.close()
 
-  def checkProductByName(name:String): Any = {
-    products.getOrElse(name.toLowerCase(),Main.massage(name + " is a Invalid product's name, Please try again or enter 0 back to the main Menu")) match {
-      case value => {
-        Main.massage("The price for " + name + " is " + value)
-        Main.massage("Please enter a product name or enter 0 back to the main Menu")
-      }
-    }
+  def getProductByName(name: String): Option[Double] = {
+    products.get(name.toLowerCase)
   }
 }
 

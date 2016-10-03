@@ -3,8 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="8226fbd3-9e1f-4f49-a774-2e367bc695c0" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/Products$$anonfun$1$$anonfun$2.class" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/classes/Products$$anonfun$1.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/ProductsSpec$$anonfun$1$$anonfun$apply$mcV$sp$3.class" afterPath="" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/target/scala-2.11/test-classes/ProductsSpec$$anonfun$1$$anonfun$apply$mcV$sp$4.class" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Main.scala" afterPath="$PROJECT_DIR$/src/main/scala/Main.scala" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Menu.scala" afterPath="$PROJECT_DIR$/src/main/scala/Menu.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/scala/Products.scala" afterPath="$PROJECT_DIR$/src/main/scala/Products.scala" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/test/scala/ProductsSpec.scala" afterPath="$PROJECT_DIR$/src/test/scala/ProductsSpec.scala" />
     </list>
@@ -46,8 +49,8 @@
       <file leaf-file-name="Main.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Main.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="385">
-              <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
+            <state relative-caret-position="1116">
+              <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="32" selection-end-column="5" />
               <folding />
             </state>
           </provider>
@@ -56,38 +59,28 @@
       <file leaf-file-name="Menu.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Menu.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="648">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
+            <state relative-caret-position="0">
+              <caret line="0" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="17" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Products.scala" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Products.scala" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/scala/Products.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="936">
-              <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+            <state relative-caret-position="720">
+              <caret line="20" column="15" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="22" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapLike.scala" pinned="false" current-in-tab="false">
-        <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/MapLike.scala">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="2669">
-              <caret line="125" column="18" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="18" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="ProductsSpec.scala" pinned="false" current-in-tab="false">
+      <file leaf-file-name="ProductsSpec.scala" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/scala/ProductsSpec.scala">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="864">
-              <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+            <state relative-caret-position="576">
+              <caret line="22" column="14" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="14" />
               <folding>
                 <element signature="e#0#45#0" expanded="true" />
               </folding>
@@ -99,7 +92,7 @@
         <entry file="file://$PROJECT_DIR$/src/main/data/productsList.csv">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="72">
-              <caret line="2" column="3" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="6" />
+              <caret line="2" column="1" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
           </provider>
@@ -119,10 +112,10 @@
     <option name="CHANGED_PATHS">
       <list>
         <option value="$PROJECT_DIR$/build.sbt" />
-        <option value="$PROJECT_DIR$/src/main/scala/Menu.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Main.scala" />
-        <option value="$PROJECT_DIR$/src/test/scala/ProductsSpec.scala" />
         <option value="$PROJECT_DIR$/src/main/scala/Products.scala" />
+        <option value="$PROJECT_DIR$/src/main/scala/Menu.scala" />
+        <option value="$PROJECT_DIR$/src/test/scala/ProductsSpec.scala" />
       </list>
     </option>
   </component>
@@ -310,7 +303,7 @@
       <recent name="C:\Users\yuanz\IdeaProjects\HannesTask_SBT\src\main\scala" />
     </key>
   </component>
-  <component name="RunManager" selected="Application.Main">
+  <component name="RunManager" selected="ScalaTest.ProductsSpec">
     <configuration default="false" name="Main" type="Application" factoryName="Application" temporary="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea" />
       <option name="MAIN_CLASS_NAME" value="Main" />
@@ -862,8 +855,8 @@
     </list>
     <recent_temporary>
       <list size="2">
-        <item index="0" class="java.lang.String" itemvalue="Application.Main" />
-        <item index="1" class="java.lang.String" itemvalue="ScalaTest.ProductsSpec" />
+        <item index="0" class="java.lang.String" itemvalue="ScalaTest.ProductsSpec" />
+        <item index="1" class="java.lang.String" itemvalue="Application.Main" />
       </list>
     </recent_temporary>
   </component>
@@ -920,32 +913,11 @@
       <workItem from="1475484140471" duration="2098000" />
       <workItem from="1475486436070" duration="5091000" />
       <workItem from="1475492415152" duration="132000" />
-      <workItem from="1475492640551" duration="10412000" />
+      <workItem from="1475492640551" duration="15582000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="ProductsSpec - 2016.10.03 at 10h 33m 37s.xml">
-      <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="ProductsSpec - 2016.10.03 at 10h 34m 09s.xml">
-      <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="ProductsSpec - 2016.10.03 at 12h 42m 34s.xml">
-      <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="ProductsSpec - 2016.10.03 at 14h 18m 54s.xml">
-      <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="ProductsSpec - 2016.10.03 at 14h 19m 17s.xml">
-      <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="ProductsSpec - 2016.10.03 at 14h 22m 49s.xml">
-      <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
-    <history-entry file="ProductsSpec - 2016.10.03 at 14h 24m 15s.xml">
-      <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
-    </history-entry>
     <history-entry file="ProductsSpec - 2016.10.03 at 14h 25m 10s.xml">
       <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
@@ -955,9 +927,30 @@
     <history-entry file="ProductsSpec - 2016.10.03 at 14h 43m 48s.xml">
       <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
     </history-entry>
+    <history-entry file="ProductsSpec - 2016.10.03 at 15h 38m 23s.xml">
+      <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="ProductsSpec - 2016.10.03 at 15h 39m 41s.xml">
+      <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="ProductsSpec - 2016.10.03 at 15h 43m 06s.xml">
+      <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="ProductsSpec - 2016.10.03 at 15h 43m 25s.xml">
+      <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="ProductsSpec - 2016.10.03 at 16h 32m 18s.xml">
+      <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="ProductsSpec - 2016.10.03 at 16h 33m 16s.xml">
+      <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
+    <history-entry file="ProductsSpec - 2016.10.03 at 16h 34m 29s.xml">
+      <configuration name="ProductsSpec" configurationId="ScalaTestRunConfiguration" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="23536000" />
+    <option name="totallyTimeSpent" value="28706000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-14" y="-14" width="3868" height="2098" extended-state="0" />
@@ -971,7 +964,7 @@
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.50572914" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.47708333" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.32941177" sideWeight="0.47708333" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32941177" sideWeight="0.49427083" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
@@ -1298,28 +1291,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Main.scala">
+    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/MapLike.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="385">
-          <caret line="15" column="0" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/scala/Menu.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="648">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/scala/ProductsSpec.scala">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="864">
-          <caret line="30" column="15" selection-start-line="30" selection-start-column="15" selection-end-line="30" selection-end-column="15" />
+        <state relative-caret-position="2669">
+          <caret line="125" column="18" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="18" />
           <folding>
-            <element signature="e#0#45#0" expanded="true" />
+            <element signature="n#!!doc" expanded="false" />
+            <element signature="e#560#576#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1327,24 +1305,42 @@
     <entry file="file://$PROJECT_DIR$/src/main/data/productsList.csv">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="72">
-          <caret line="2" column="3" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="6" />
+          <caret line="2" column="1" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="jar://$USER_HOME$/.ivy2/cache/org.scala-lang/scala-library/srcs/scala-library-2.11.8-sources.jar!/scala/collection/MapLike.scala">
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Main.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2669">
-          <caret line="125" column="18" selection-start-line="125" selection-start-column="16" selection-end-line="125" selection-end-column="18" />
+        <state relative-caret-position="1116">
+          <caret line="31" column="7" selection-start-line="31" selection-start-column="7" selection-end-line="32" selection-end-column="5" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/scala/Products.scala">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="936">
-          <caret line="26" column="17" selection-start-line="26" selection-start-column="17" selection-end-line="26" selection-end-column="17" />
+        <state relative-caret-position="720">
+          <caret line="20" column="15" selection-start-line="20" selection-start-column="6" selection-end-line="20" selection-end-column="22" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/scala/Menu.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="4" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/scala/ProductsSpec.scala">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="576">
+          <caret line="22" column="14" selection-start-line="22" selection-start-column="6" selection-end-line="22" selection-end-column="14" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

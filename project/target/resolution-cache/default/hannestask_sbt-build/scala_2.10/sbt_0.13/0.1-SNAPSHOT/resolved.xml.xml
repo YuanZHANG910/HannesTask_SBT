@@ -4,7 +4,7 @@
 		module="hannestask_sbt-build"
 		revision="0.1-SNAPSHOT"
 		status="integration"
-		publication="20160930155207"
+		publication="20161003162745"
 		e:sbtVersion="0.13" e:scalaVersion="2.10"
 	>
 		<description>

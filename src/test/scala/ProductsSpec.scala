@@ -1,4 +1,5 @@
 import org.scalatest.{MustMatchers, WordSpec}
+import Products._
 
 import scala.io.Source
 /**
@@ -7,7 +8,7 @@ import scala.io.Source
 class ProductsSpec extends WordSpec with MustMatchers {
 
   val fileName = "src/main/data/productsList.csv"
-  var products: Map[String,Double] = Map()
+  val products = scala.collection.mutable.Map[String, Double]()
   val sources = Source.fromFile(fileName)
 
   for(line <- sources.getLines()) {
@@ -17,22 +18,21 @@ class ProductsSpec extends WordSpec with MustMatchers {
   sources.close()
 
   "The Products class" should {
+
     "able to give a map of products" in {
       products.contains("orange") mustBe true
     }
 
     "able to search a product by name and give the price if the product was in the list" in {
-      Products.checkProductByName("Orange") mustBe println(products("oRanGe".toLowerCase))
-      println()
+      getProductByName("Orange").get mustBe 0.6
     }
 
     "able to search a product by name without case sensitive" in {
-      Products.checkProductByName("oRanGe") mustBe println(products("oRanGe".toLowerCase))
-      println()
+      getProductByName("oRanGe").get mustBe 0.6
     }
 
     "if the product was not in the list, it should able to point it out" in {
-      Products.checkProductByName("Onge") mustBe println("Invalid product's name, Please try again")
+      getProductByName("Onge") mustBe None
     }
   }
 

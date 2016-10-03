@@ -1,5 +1,7 @@
+import Products._
+
 /**
-  * Created by yuanz on 03/10/2016.
+  * Created by yuan on 03/10/2016.
   */
 object Menu {
 
@@ -16,8 +18,18 @@ object Menu {
       input match {
         case "" => Main.massage("Come on Boss! Please enter something or enter 0 back to the main Menu")
         case "0" => Main.mainTemplate
-        case _ => Products.checkProductByName(input)
+        case _ => checkProductByName(input)
       }
+    }
+  }
+
+  def checkProductByName(name:String): Any = {
+    getProductByName(name) match {
+      case Some(v) => {
+        Main.massage("The price for " + name + " is " + v)
+        Main.massage("Please enter a product name or enter 0 back to the main Menu")
+      }
+      case None => Main.massage(name + " is a Invalid product's name, Please try again or enter 0 back to the main Menu")
     }
   }
 }

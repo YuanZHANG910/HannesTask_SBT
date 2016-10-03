@@ -9,7 +9,7 @@ object Main {
     mainTemplate
   }
 
-  def mainTemplate: Unit ={
+  def mainTemplate: Unit = {
     Menu.mainMenu()
     while(true) {
       readInput match {
@@ -33,7 +33,7 @@ object Main {
     }
   }
 
-  def readInput: String ={
+  def readInput: String = {
     val input = scala.io.StdIn.readLine()
     input
   }
