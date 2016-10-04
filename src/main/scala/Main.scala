@@ -9,7 +9,7 @@ object Main {
     mainTemplate
   }
 
-  def mainTemplate: Unit = {
+  def mainTemplate: Any = {
     Menu.mainMenu()
     while(true) {
       readInput match {
@@ -38,7 +38,7 @@ object Main {
     input
   }
 
-  def massage(feedBack:String): Unit ={
+  def massage(feedBack:String): Unit = {
     println(feedBack)
   }
 }
