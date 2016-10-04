@@ -1,10 +1,10 @@
 import org.scalatest.{MustMatchers, WordSpec}
 import Products._
 
-import scala.io.Source
 /**
   * Created by yuan on 30/09/2016.
   */
+
 class ProductsSpec extends WordSpec with MustMatchers {
 
   "The Products class" should {

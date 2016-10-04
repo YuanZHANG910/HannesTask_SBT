@@ -2,17 +2,17 @@ import Products._
 import Main._
 import MenuControl._
 
-
 /**
   * Created by yuan on 03/10/2016.
   */
+
 object Menu {
 
   def mainMenu() = {
     println("Main Menu")
     println("Please enter one of the following to continue:")
     println("1: Search for a product")
-    println("2: Simple calculator")
+    println("2: Simple calculator (simple multiplication only)")
     println("8: Check products in category")
     println("9: Show all products details")
     println("0: If you would like to exit")

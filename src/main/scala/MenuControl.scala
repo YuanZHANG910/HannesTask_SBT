@@ -5,8 +5,9 @@ import Products._
 import scala.util.Success
 
 /**
-  * Created by yuanz on 04/10/2016.
+  * Created by yuan on 04/10/2016.
   */
+
 object MenuControl {
 
   def checkProduct() = {
@@ -31,7 +32,7 @@ object MenuControl {
             if (input.toInt <= lengthOfCategoryList-1) {
               massage(s"Products in ${getCategory(input.toInt - 1)} are:")
               println("Name   ||    Price   ||   Category")
-              for (product <- getProductsInACategory(getCategory(input.toInt - 1)).map(_._2)){
+              for (product <- getProductsInACategory(getCategory(input.toInt - 1)).values){
                 println(s"${product.name}   £${product.price}   ${product.Category}")
               }
               massage("")
@@ -49,9 +50,7 @@ object MenuControl {
   }
 
   def checkAllProducts() = {
-    val input = scala.io.StdIn.readLine()
-
-    input match {
+    readInput match {
       case "0" => mainTemplate
       case "1" => {
         println("Name   ||    Price   ||   Category")
@@ -85,7 +84,7 @@ object MenuControl {
   def checkProductByName(name:String): Any = {
     getProductByName(name) match {
       case Some(v) => {
-        massage("The price for " + name + " is £" + v.price)
+        massage("The price for " + name + " is " + v.price)
         massage("Please enter a product name or enter 0 back to the main Menu")
       }
       case None => massage(name + " is a Invalid product's name, Please try again or enter 0 back to the main Menu")

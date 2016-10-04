@@ -2,9 +2,11 @@ import Products._
 import Main._
 
 import scala.util.Success
+
 /**
-  * Created by yuanz on 04/10/2016.
+  * Created by yuan on 04/10/2016.
   */
+
 class SimpleCalculator {
 
   mainMassage
@@ -32,7 +34,7 @@ class SimpleCalculator {
   }
 
   def mainMassage: Any = {
-    println("Please enter a products name or a price, or enter 0 back to the Main Menu")
+    println("Please enter a products name or a figure(price), or enter 0 back to the Main Menu")
   }
 
   def times(a: Double, b:Int): Double ={
