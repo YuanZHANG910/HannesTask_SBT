@@ -1,3 +1,5 @@
+import Menu._
+import MenuControl._
 /**
   * Created by yuan on 30/09/16.
   */
@@ -10,10 +12,13 @@ object Main {
   }
 
   def mainTemplate: Any = {
-    Menu.mainMenu()
+    mainMenu()
     while(true) {
       readInput match {
-        case "1" => Menu.checkProductMenu()
+        case "1" => checkProduct()
+        case "2" => SimpleCalculator
+        case "8" => categoryMenu()
+        case "9" => checkAllProducts()
         case "0" => {
           massage("Boss are you sure you would like to exit?"  )
           massage("Enter Y to conform, or anything else to stay with me")
@@ -22,12 +27,12 @@ object Main {
               massage("OK, goodbye boss")
               sys.exit
             }
-            case _ => Menu.mainMenu()
+            case _ => mainMenu()
           }
         }
         case _ => {
           massage("Come on Boss!")
-          Menu.mainMenu()
+          mainMenu()
         }
       }
     }
