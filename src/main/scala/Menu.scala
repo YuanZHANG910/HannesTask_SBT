@@ -14,7 +14,7 @@ object Menu {
     println("1: Search for a product")
     println("2: Simple calculator")
     println("8: Check products in category")
-    println("9: Show all products details (in products alphabetical order)")
+    println("9: Show all products details")
     println("0: If you would like to exit")
   }
 
@@ -27,5 +27,14 @@ object Menu {
     }
     println("0: Back to the main Menu")
     checkCategory(n)
+  }
+
+  def sortingAllMenu(): Any = {
+    massage("Sorting all products by:")
+    println("1: Products Name alphabetical order")
+    println("2: Products Price ascending order")
+    println("3: Category")
+    println("0: Back to the main Menu")
+    checkAllProducts()
   }
 }

@@ -18,7 +18,7 @@ object Main {
         case "1" => checkProduct()
         case "2" => SimpleCalculator
         case "8" => categoryMenu()
-        case "9" => checkAllProducts()
+        case "9" => sortingAllMenu()
         case "0" => {
           massage("Boss are you sure you would like to exit?"  )
           massage("Enter Y to conform, or anything else to stay with me")
