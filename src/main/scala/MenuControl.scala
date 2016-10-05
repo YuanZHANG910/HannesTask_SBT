@@ -33,7 +33,7 @@ object MenuControl {
               massage(s"Products in ${getCategory(input.toInt - 1)} are:")
               println("Name   ||    Price   ||   Category")
               for (product <- getProductsInACategory(getCategory(input.toInt - 1)).values){
-                println(s"${product.name}   £${product.price}   ${product.Category}")
+                println(s"${product.name}   £${product.price}   ${product.category}")
               }
               massage("")
               massage("End of products list")
@@ -55,19 +55,19 @@ object MenuControl {
       case "1" => {
         println("Name   ||    Price   ||   Category")
         for(product <- productsMap.toList.map(_._2).sortBy(_.name)){
-          println(s"${product.name}   £${product.price}   ${product.Category}")
+          println(s"${product.name}   £${product.price}   ${product.category}")
         }
       }
       case "2" => {
         println("Name   ||    Price   ||   Category")
         for(product <- productsMap.toList.map(_._2).sortBy(_.price)){
-          println(s"${product.name}   £${product.price}   ${product.Category}")
+          println(s"${product.name}   £${product.price}   ${product.category}")
         }
       }
       case "3" => {
         println("Name   ||    Price   ||   Category")
-        for(product <- productsMap.toList.map(_._2).sortBy(_.Category)){
-          println(s"${product.name}   £${product.price}   ${product.Category}")
+        for(product <- productsMap.toList.map(_._2).sortBy(_.category)){
+          println(s"${product.name}   £${product.price}   ${product.category}")
         }
       }
       case _ => {

@@ -1,24 +1,22 @@
-import scala.io.Source
-
+import com.mongodb.casbah.Imports._
 /**
   * Created by yuan on 30/09/16.
   */
 
-case class Product(name: String, price: Double, Category: String)
+case class Product(name: String, price: Double, category: String)
 
 class Products {
 
-  val fileName = "src/main/data/productsList.csv"
   val productsMap = scala.collection.mutable.Map[String, Product]()
 
-  def getProductsInMap: Any =  {
-    val sources = Source.fromFile(fileName)
-
-    for(line <- sources.getLines()) {
-      val cols = line.split(',').map(_.trim)
-      productsMap += (cols(0).toLowerCase() -> Product(cols(0), cols(1).toDouble, cols(2)))
+  def getProductMapFromMongo:Any = {
+    val mongoClient =  MongoClient()
+    val db = mongoClient("super-shop")
+    val productsCol = db("Products")
+    val allDocs=productsCol.find()
+    for(a <- allDocs.toList){
+      productsMap += (a.toList(1)._2.toString.toLowerCase -> Product(a.toList(1)._2.toString, a.toList(2)._2.toString.toDouble, a.toList(3)._2.toString))
     }
-    sources.close()
   }
 
   def getProductByName(name: String): Option[Product] = {
@@ -26,14 +24,14 @@ class Products {
   }
 
   def getCategory: List[String] = {
-    productsMap.map(_._2.Category).toList.distinct.sorted
+    productsMap.map(_._2.category).toList.distinct.sorted
   }
 
   def getProductsInACategory(catName: String): Map[String, Product] = {
-    productsMap.filter(_._2.Category==catName).toMap
+    productsMap.filter(_._2.category==catName).toMap
   }
 }
 
 object Products extends Products {
-  getProductsInMap
+  getProductMapFromMongo
 }
