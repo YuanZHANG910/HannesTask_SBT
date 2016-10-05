@@ -1,4 +1,6 @@
 import com.mongodb.casbah.Imports._
+import MongoProcessor._
+
 /**
   * Created by yuan on 30/09/16.
   */
@@ -8,17 +10,6 @@ case class Product(name: String, price: Double, category: String)
 class Products {
 
   val productsMap = scala.collection.mutable.Map[String, Product]()
-
-  def getProductMapFromMongo:Any = {
-    val mongoClient =  MongoClient()
-    val db = mongoClient("super-shop")
-    val productsCol = db("Products")
-    val allDocs=productsCol.find()
-    def getProductDetail(l:DBObject) = {
-      productsMap += (l.toList(1)._2.toString.toLowerCase -> Product(l.toList(1)._2.toString, l.toList(2)._2.toString.toDouble, l.toList(3)._2.toString))
-    }
-    allDocs.toList.foreach(getProductDetail)
-  }
 
   def getProductByName(name: String): Option[Product] = {
     productsMap.get(name.toLowerCase)
@@ -30,6 +21,10 @@ class Products {
 
   def getProductsInACategory(catName: String): Map[String, Product] = {
     productsMap.filter(_._2.category==catName).toMap
+  }
+
+  def getProductDetail(l:DBObject) = {
+    productsMap += (l.toList(1)._2.toString.toLowerCase -> Product(l.toList(1)._2.toString, l.toList(2)._2.toString.toDouble, l.toList(3)._2.toString))
   }
 }
 

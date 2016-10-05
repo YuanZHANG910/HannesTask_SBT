@@ -42,6 +42,7 @@ object MenuProcessor {
       }
     }
   }
+
   def checkAllProducts() = {
     readInput match {
       case "0" => mainTemplate
