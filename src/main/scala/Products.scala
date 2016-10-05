@@ -14,9 +14,10 @@ class Products {
     val db = mongoClient("super-shop")
     val productsCol = db("Products")
     val allDocs=productsCol.find()
-    for(a <- allDocs.toList){
-      productsMap += (a.toList(1)._2.toString.toLowerCase -> Product(a.toList(1)._2.toString, a.toList(2)._2.toString.toDouble, a.toList(3)._2.toString))
+    def getProductDetail(l:DBObject) = {
+      productsMap += (l.toList(1)._2.toString.toLowerCase -> Product(l.toList(1)._2.toString, l.toList(2)._2.toString.toDouble, l.toList(3)._2.toString))
     }
+    allDocs.toList.foreach(getProductDetail)
   }
 
   def getProductByName(name: String): Option[Product] = {

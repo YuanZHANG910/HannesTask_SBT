@@ -1,6 +1,6 @@
 import Products._
 import Main._
-import MenuControl._
+import MenuProcessor._
 
 /**
   * Created by yuan on 03/10/2016.
@@ -33,8 +33,20 @@ object Menu {
     massage("Sorting all products by:")
     println("1: Products Name alphabetical order")
     println("2: Products Price ascending order")
-    println("3: Category")
+    println("3: Category alphabetical order")
     println("0: Back to the main Menu")
     checkAllProducts()
+  }
+
+  def groupMassageForEndList(): Unit = {
+    massage("")
+    massage("End of products list")
+    massage("")
+    massage("Listed as above")
+    massage("Are there anything else I can do for you my boss?")
+  }
+
+  def tableTopLine(): Unit = {
+    println("Name   ||    Price   ||   Category")
   }
 }
