@@ -23,7 +23,7 @@ class Products {
     productsMap.filter(_._2.category==catName).toMap
   }
 
-  def getProductDetail(l:DBObject) = {
+  def setProductDetail(l:DBObject) = {
     productsMap += (l.toList(1)._2.toString.toLowerCase -> Product(l.toList(1)._2.toString, l.toList(2)._2.toString.toDouble, l.toList(3)._2.toString))
   }
 }
