@@ -8,7 +8,7 @@ import MenuProcessor._
 
 object Menu {
 
-  def mainMenu() = {
+  def mainMenu(): Unit = {
     println("Main Menu")
     println("Please enter one of the following to continue:")
     println("1: Search for a product")
@@ -18,7 +18,7 @@ object Menu {
     println("0: If you would like to exit")
   }
 
-  def categoryMenu(): Any = {
+  def categoryMenu(): Unit = {
     massage("Please enter one of the following Category to continue:")
     var n = 1
     for (cat <- getCategory) {
@@ -29,7 +29,7 @@ object Menu {
     checkCategory(n)
   }
 
-  def sortingAllMenu(): Any = {
+  def sortingAllMenu(): Unit = {
     massage("Sorting all products by:")
     println("1: Products Name alphabetical order")
     println("2: Products Price ascending order")

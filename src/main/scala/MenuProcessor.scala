@@ -10,7 +10,7 @@ import scala.util.Success
 
 object MenuProcessor {
 
-  def checkProduct() = {
+  def checkProduct(): Unit = {
     massage("Please enter a product name or enter 0 back to the main Menu")
     while (true) {
       val input = scala.io.StdIn.readLine()
@@ -22,7 +22,7 @@ object MenuProcessor {
     }
   }
 
-  def checkCategory(lengthOfCategoryList:Int) = {
+  def checkCategory(lengthOfCategoryList:Int): Unit = {
     val input = scala.io.StdIn.readLine()
     input match {
       case "0" => mainTemplate
@@ -43,7 +43,7 @@ object MenuProcessor {
     }
   }
 
-  def checkAllProducts() = {
+  def checkAllProducts(): Unit = {
     readInput match {
       case "0" => mainTemplate
       case "1" => sortingBy(0)
@@ -62,11 +62,11 @@ object MenuProcessor {
     productsMap.toList.map(_._2).sortBy(_.productElement(sortingBy).toString).foreach(foreachProduct)
   }
 
-  def foreachProduct(product:Product) = {
+  def foreachProduct(product:Product): Unit = {
     println(s"${product.name}   £${product.price}   ${product.category}")
   }
 
-  def checkProductByName(name:String): Any = {
+  def checkProductByName(name:String): Unit = {
     getProductByName(name) match {
       case Some(v) => {
         massage("The price for " + name + " is " + v.price)

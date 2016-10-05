@@ -9,10 +9,10 @@ object Main {
 
   def main(args: Array[String]): Unit = {
     massage("Hi Boss, how can I help?")
-    mainTemplate
+    mainTemplate()
   }
 
-  def mainTemplate: Any = {
+  def mainTemplate(): Unit = {
     mainMenu()
     while(true) {
       readInput match {

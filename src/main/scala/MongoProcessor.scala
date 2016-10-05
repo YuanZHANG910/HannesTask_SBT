@@ -9,7 +9,7 @@ import Products._
 
 object MongoProcessor {
 
-  def getProductMapFromMongo:Any = {
+  def loadProductMapFromMongo(): Unit = {
     val mongoClient =  MongoClient()
     val db = mongoClient("super-shop")
     val productsCol = db("Products")
