@@ -1,30 +1,33 @@
-import scala.io.Source
+import MongoProcessor._
+import com.mongodb.casbah.Imports._
 
 /**
   * Created by yuan on 30/09/16.
   */
 
-case class Product(name: String, price: Float)
+case class Product(name: String, price: Double, category: String)
 
 class Products {
 
-  val fileName = "src/main/data/productsList.csv"
+  val productsMap = scala.collection.mutable.Map[String, Product]()
 
-  var products: Array[Product] = Array.empty
+  def getProductByName(name: String): Option[Product] = {
+    productsMap.get(name.toLowerCase)
+  }
 
-  def getProductByName(name:String): Any = {
-    products.exists(_.name.toLowerCase() == name.toLowerCase()) match {
-      case true => println(products.filter(_.name.toLowerCase() == name.toLowerCase()).head)
-      case false => println("Invalid product's name, Please try again")
-    }
+  def getCategory: List[String] = {
+    productsMap.map(_._2.category).toList.distinct.sorted
+  }
+
+  def getProductsInACategory(catName: String): Map[String, Product] = {
+    productsMap.filter(_._2.category == catName).toMap
+  }
+
+  def setProductDetail(l: DBObject): Unit = {
+    productsMap += (l.toList(1)._2.toString.toLowerCase -> Product(l.toList(1)._2.toString, l.toList(2)._2.toString.toDouble, l.toList(3)._2.toString))
   }
 }
 
-object Products extends Products{
-  val sources = Source.fromFile(fileName)
-  for(line <- sources.getLines()) {
-    val cols = line.split(',').map(_.trim)
-    products = products :+ Product(cols(0), cols(1).toFloat)
-  }
-  sources.close()
+object Products extends Products {
+  loadProductMapFromMongo()
 }
