@@ -11,10 +11,10 @@ class Products {
   val fileName = "src/main/data/productsList.csv"
   val productsMap = scala.collection.mutable.Map[String, Product]()
 
-  def getProductsInMap: Any =  {
+  def getProductsInMap: Any = {
     val sources = Source.fromFile(fileName)
 
-    for(line <- sources.getLines()) {
+    for (line <- sources.getLines()) {
       val cols = line.split(',').map(_.trim)
       productsMap += (cols(0).toLowerCase() -> Product(cols(0), cols(1).toDouble, cols(2)))
     }
@@ -30,7 +30,7 @@ class Products {
   }
 
   def getProductsInACategory(catName: String): Map[String, Product] = {
-    productsMap.filter(_._2.Category==catName).toMap
+    productsMap.filter(_._2.Category == catName).toMap
   }
 }
 

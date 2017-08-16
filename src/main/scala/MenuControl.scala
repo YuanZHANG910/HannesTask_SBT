@@ -22,17 +22,17 @@ object MenuControl {
     }
   }
 
-  def checkCategory(lengthOfCategoryList:Int) = {
+  def checkCategory(lengthOfCategoryList: Int) = {
     val input = scala.io.StdIn.readLine()
     input match {
       case "0" => mainTemplate
-      case _ => {
-        scala.util.Try (input.toInt) match {
-          case Success(_) => {
-            if (input.toInt <= lengthOfCategoryList-1) {
+      case _ =>
+        scala.util.Try(input.toInt) match {
+          case Success(_) =>
+            if (input.toInt <= lengthOfCategoryList - 1) {
               massage(s"Products in ${getCategory(input.toInt - 1)} are:")
               println("Name   ||    Price   ||   Category")
-              for (product <- getProductsInACategory(getCategory(input.toInt - 1)).values){
+              for (product <- getProductsInACategory(getCategory(input.toInt - 1)).values) {
                 println(s"${product.name}   £${product.price}   ${product.Category}")
               }
               massage("")
@@ -41,38 +41,31 @@ object MenuControl {
               massage("Listed as above")
               massage("Are there anything else I can do for you my boss?")
               categoryMenu()
-            }else categoryMenu()
-          }
+            } else categoryMenu()
           case _ => categoryMenu()
         }
-      }
     }
   }
 
   def checkAllProducts() = {
     readInput match {
       case "0" => mainTemplate
-      case "1" => {
+      case "1" =>
         println("Name   ||    Price   ||   Category")
-        for(product <- productsMap.toList.map(_._2).sortBy(_.name)){
+        for (product <- productsMap.toList.map(_._2).sortBy(_.name)) {
           println(s"${product.name}   £${product.price}   ${product.Category}")
         }
-      }
-      case "2" => {
+      case "2" =>
         println("Name   ||    Price   ||   Category")
-        for(product <- productsMap.toList.map(_._2).sortBy(_.price)){
+        for (product <- productsMap.toList.map(_._2).sortBy(_.price)) {
           println(s"${product.name}   £${product.price}   ${product.Category}")
         }
-      }
-      case "3" => {
+      case "3" =>
         println("Name   ||    Price   ||   Category")
-        for(product <- productsMap.toList.map(_._2).sortBy(_.Category)){
+        for (product <- productsMap.toList.map(_._2).sortBy(_.Category)) {
           println(s"${product.name}   £${product.price}   ${product.Category}")
         }
-      }
-      case _ => {
-        massage("Please enter something valid")
-      }
+      case _ => massage("Please enter something valid")
     }
 
     massage("")
@@ -81,7 +74,7 @@ object MenuControl {
     mainMenu()
   }
 
-  def checkProductByName(name:String): Any = {
+  def checkProductByName(name: String): Any = {
     getProductByName(name) match {
       case Some(v) => {
         massage("The price for " + name + " is " + v.price)
