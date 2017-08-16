@@ -1,5 +1,5 @@
-import org.scalatest.{MustMatchers, WordSpec}
 import Products._
+import org.scalatest.{MustMatchers, WordSpec}
 
 /**
   * Created by yuan on 30/09/2016.

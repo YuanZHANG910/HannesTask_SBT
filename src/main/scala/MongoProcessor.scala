@@ -1,7 +1,5 @@
-import com.mongodb.casbah.Imports._
-import Main._
-import Menu._
 import Products._
+import com.mongodb.casbah.Imports._
 
 /**
   * Created by yuanz on 05/10/2016.

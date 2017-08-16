@@ -1,5 +1,5 @@
-import com.mongodb.casbah.Imports._
 import MongoProcessor._
+import com.mongodb.casbah.Imports._
 
 /**
   * Created by yuan on 30/09/16.
@@ -20,10 +20,10 @@ class Products {
   }
 
   def getProductsInACategory(catName: String): Map[String, Product] = {
-    productsMap.filter(_._2.category==catName).toMap
+    productsMap.filter(_._2.category == catName).toMap
   }
 
-  def setProductDetail(l:DBObject): Unit = {
+  def setProductDetail(l: DBObject): Unit = {
     productsMap += (l.toList(1)._2.toString.toLowerCase -> Product(l.toList(1)._2.toString, l.toList(2)._2.toString.toDouble, l.toList(3)._2.toString))
   }
 }

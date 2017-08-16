@@ -1,6 +1,6 @@
-import Products._
 import Main._
 import MenuProcessor._
+import Products._
 
 /**
   * Created by yuan on 03/10/2016.
@@ -23,7 +23,7 @@ object Menu {
     var n = 1
     for (cat <- getCategory) {
       println(s"$n. $cat")
-      n+=1
+      n += 1
     }
     println("0: Back to the main Menu")
     checkCategory(n)
